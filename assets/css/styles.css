@@ -57,7 +57,14 @@
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;
+
     }
+    /* .section{
+      width: 1000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } */
 }
 
 /* BASE */
@@ -534,6 +541,28 @@
 .qualification__active[data-content]{
   display: block;
 }
+
+.education_score{
+  color: var(--first-color);
+  margin-top: 0.5rem;
+}
+
+
+
+
+/* ==============================Expriment+++++++++++++++++ */
+@media screen and (max-width:after(790px) ){
+  
+} 
+
+
+
+
+
+
+
+
+
 
   /*==================== SERVICES ====================*/
   
