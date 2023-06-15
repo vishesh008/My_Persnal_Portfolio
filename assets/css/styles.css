@@ -11,9 +11,11 @@
     --first-color-alt:hsl(var(--hue-color),57%,53%);
     --first-color-lighter:hsl(var(--hue-color),92%,85%);
     --title-color:hsl(var(--hue-color),8%,15%);
-    --text-color-light:hsl(var(--hue-color),8%,45%);
+    --text-color-light:hsl(var(--hue-color),8%,65%);
+    --text-color:hsl(var(--hue-color),8%,45%);
     --input-color:hsl(var(--hue-color),70%,96%);
     --body-color:hsl(var(--hue-color),60%,99%);
+    --input-color:hsl(var(--hue-color),70%,96%);
     --container-color:#fff;
 
         /* Fonts */
@@ -47,6 +49,39 @@
     --z-modal: 1000;
 
   }
+
+  /* /============Variables Dark theme ========= */
+body.dark-theme{
+ 
+    --first-color-second : hsl(var(--hue-color),30%,8%);
+   
+
+    --title-color:hsl(var(--hue-color),8%,95%);
+   
+    --text-color:hsl(var(--hue-color),8%,75%);
+    --input-color:hsl(var(--hue-color),29%,16%);
+    --body-color:hsl(var(--hue-color),28%,12%);
+   
+    --container-color:hsl(var(--hue-color),29%,16%);;
+}
+
+/* Button dark/Light */
+.nav__btns{
+  display:flex;
+  align-items:center;
+ 
+}
+.change-theme{
+  font-size: 1.25rem;
+  color:var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+}
+.change-theme:hover{
+  color:var(--first-color);
+
+}
+
 /* Font size for large devices */
 @media screen and (min-width: 968px) {
     :root {
@@ -261,7 +296,7 @@
     align-items: center;
 } */
   .home__blob{
-    width: 200px;
+    width: 275px;
     fill : var(--first-color);
   }
   .home__blob-img{
@@ -325,6 +360,7 @@
   .button--flex{
     display: inline-flex;
     align-items: center;
+    height: fit-content;
   }
   /*==================== ABOUT ====================*/
   .about__img{
@@ -358,6 +394,7 @@
   .about__buttons{
     display: flex;
     justify-content: center;
+
   }
   
   /*==================== SKILLS ====================*/
@@ -488,6 +525,7 @@
     font-weight: var(--font-medium);
     cursor: pointer;
     transition: 0.4s;
+    padding:1rem;
   }
   .qualification__button:hover{
     color: var(--first-color);
@@ -551,13 +589,6 @@
 
 
 /* ==============================Expriment+++++++++++++++++ */
-@media screen and (max-width:after(790px) ){
-  
-} 
-
-
-
-
 
 
 
@@ -571,8 +602,60 @@
   
   
   /*==================== PORTFOLIO ====================*/
+  .portfolio__container{
+    overflow: initial;
+  }
+  .portfolio__content{
+    padding :0 1.5rem;
+  }
+  .portfolio__img{
+    width: 256px;
+    border-radius: .5rem;
+   display: grid;
+    margin: auto;
+    
+  }
+  .portfolio__title{
+    
+    font-size : var(--h3-font-size);
+    margin-bottom:var(--mb-0-25) ;
+
+  }
+  .portfolio__discription{
+    margin-bottom: var(--mb-0-75) ;
+  }
+  .portfolio__button:hover .button__icon{
+    transform : translateX(0.25rem);
+
+  }
   
+  .portfolio__data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-next::after,.swiper-button-prev::after{
   
+    visibility: hidden;
+  }
+
+
+  .swiper-portfolio-icon{
+    font-size: 2rem;
+    color: var(--first-color);
+  }
+
+  .swiper-button-next::after{
+    margin-left: -2.5rem;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom : -5.5rem;
+    
+  }
+  .swiper-pagination{
+    position: unset;
+  }
   /*==================== PROJECT IN MIND ====================*/
   
   
@@ -580,11 +663,91 @@
   
   
   /*==================== CONTACT ME ====================*/
+  .contact__container{
+    row-gap: 3rem;
+  }
+  .contact__information{
+    display: flex;
+    margin-bottom: var(--mb-2);
+  }
+  .contact__icon{
+    font-size: 2rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+  }
+  .contact__title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+  }
+  .contact__subtitle{
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+  }
+  .contact__content{
+    background-color: var(--input-color);
+    border-radius: .5rem;
+    padding: .75rem 1rem .25rem;
+
   
-  
+  }
+  .contact__label{
+    font-size: var(--smaller-font-size);
+    color: var(--title-color);
+  }
+  .contact__input{
+    width: 100%;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    border: none;
+    outline: none;
+    padding: .25rem .5rem .5rem 0;
+  }
+  .contact__button{
+    width: fit-content;
+  }
   /*==================== FOOTER ====================*/
+  .footer{
+    padding-top:2rem;
+
+  }
+  .footer__container{
+    row-gap: 3.5rem;
+  }
+  .footer__bg{
+    background-color: var(--first-color-second);
+    padding: 2rem 0 3rem;
+  }
+  .footer__title{
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-0-25);
+  }
+  .footer__subtitle{
+   
+    font-size: var(--small-font-size);
+  }
+  .footer__links{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+  }
+  .footer__link:hover{
+    color: var(--first-color-lighter);
   
-  
+  }
+  .footer__social{
+    margin: .75rem;
+    font-size: 1.3rem;
+  }
+  .footer__social:hover{
+    color:var(--first-color-lighter)
+  }
+  .footer__title,.footer__subtitle,.footer__link, .footer__social{
+    color: #FFF;
+  }
+
   /*========== SCROLL UP ==========*/
   
   
@@ -596,9 +759,173 @@
   
   /*==================== MEDIA QUERIES ====================*/
   /* For small devices */
-  
+  @media  screen and (max-width: 350px) {
+    .container{
+      margin-left: var(--mb-1);
+      margin-right: var(--mb-1);
+
+    }
+    .nav__menu{
+      padding : 2rem .25rem 4rem;
+
+    }
+    .nav__list{
+      column-gap: 0;
+    }
+    .home__content{
+      grid-template-columns: .25fr 3fr ;
+    }
+    .home__blob{
+      width: 180px;
+    }
+    .skills__titlesP{
+      font-size: var(--normal-font-size);
+
+    }
+    .qualification__data{
+      gap:.5rem
+    }
+  }
   
   /* For medium devices */
-  
+  @media screen and (min-width:568px){
+    .home__content{
+      grid-template-columns: max-content 1fr 1fr;
+    }
+    .home__data{
+      grid-column: initial;
+    }
+    .home__img{
+      order:1;
+      justify-self: center;
+    }
+    .about__container, .portfolio__content, .contact__container,.footer__container{
+      grid-template-columns: repeat( 2 , 1fr);
+    }
+    
+    .qualification__sections{
+      display: grid;
+      grid-template-columns: 0.6fr;
+      justify-content: center;
+      
+    }
+
+  }
+  @media screen and (min-width:768px){
+    .container{
+      margin-left:auto;
+      margin-right: auto;
+
+    }
+    body{
+      margin:0;
+    }
+    .section{
+      padding: 6rem 0 2rem;
+    }
+    .section__subtitle{
+      margin-bottom: 4rem;
+    }
+    .header{
+      top:0;
+      bottom:initial;
+    }
+    .header, .main , .footer__container{
+      padding: 0 1rem;
+    }
+    .nav{
+      margin-top: 1rem;
+      height: calc(var(--header-height)+ 3rem);
+      column-gap: 3rem;
+    }
+    .nav__icon,
+    .nav__close,
+    .nav__toggle{
+      display: none;
+    }
+
+    .nav__list{
+      display: flex;
+      column-gap: 2rem;
+    }
+    .nav__menu{
+      margin-left:auto;
+    }
+    .change-theme{
+      margin:0;
+    }
+    .home__container{
+      row-gap: 5rem;
+    }
+    .home__content{
+      padding-top: 5.5rem;
+      column-gap : 2rem;
+    }
+    .home__blob{
+      width: 300px;
+    }
+    .about__container{
+      column-gap: .5rem;
+    }
+    .about__img{
+      width: 350px;
+      grid-row: 1/4;
+
+    }
+    .about__description{
+      text-align: initial;
+    }
+    .about__info{
+      justify-content: space-evenly;
+    }
+    .about__buttons{
+      justify-content: space-evenly;
+    }
+    .qualification__tabs{
+      justify-content: center;
+
+    }
+    .qualification__button{
+      margin: 0 var(--mb-1);
+    }
+    .qualification__section{
+      grid-template-columns: 0.5rem;
+    }
+    .portfolio__img{
+     
+      width: 350px;
+    }
+    .portfolio__content{
+      
+      align-items: center;
+    }
+    .skills__content1{
+      grid-row: 1/2;
+    }
+    
+
+
+  }
   
   /* For large devices */
+  @media screen and (min-width: 1024px) {
+    .header,
+    .main,
+    .footer__container{
+      padding: 0;
+    }
+    .home__blob{
+      width: 350px;
+    }
+
+    .home__social{
+      transform: translateX(-6rem);
+    }
+    .swiper-button-prev::before{
+      margin-left: -2.5rem;
+    }
+    .portfolio__content{
+      width: 100%;
+    }
+    
+  }
